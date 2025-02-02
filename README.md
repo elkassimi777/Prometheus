@@ -11,4 +11,6 @@ Prometheus Installation
 - After I installed Prometheus , I install node_exoprter to be able prometheus scrap
 metrics from my computer.
 
-- In the first conf im using Http to scrap metrics
+- In the first conf im using Http to scrap metrics 
+
+- Today i will use https to scrap metrics
