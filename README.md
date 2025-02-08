@@ -1,5 +1,5 @@
-# Prometheus
-This repo shows how to set prometheus localy
+# Monitoring
+This repo shows how to set prometheus and grafana localy
 
 Prometheus Installation
 
