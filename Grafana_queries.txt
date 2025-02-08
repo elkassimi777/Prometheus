@@ -1,0 +1,3 @@
+CPU_usage:
+    avg without(cpu) (irate(node_cpu_seconds_total{job="node_exporter",instance="localhost:9100" ,mode!="idle"}[1m]))
+
