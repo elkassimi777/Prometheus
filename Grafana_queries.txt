@@ -1,3 +1,12 @@
 CPU_usage:
     avg without(cpu) (irate(node_cpu_seconds_total{job="node_exporter",instance="localhost:9100" ,mode!="idle"}[1m]))
 
+Memory:
+    - Used_memory:
+       node_memory_MemTotal_bytes{instance="localhost:9100",job="node_exporter"}-node_memory_MemFree_bytes{instance="localhost:9100",job="node_exporter"}-node_memory_Cached_bytes{instance="localhost:9100",job="node_exporter"}-node_memory_Buffers_bytes{instance="localhost:9100",job="node_exporter"}
+    - Buffer_memory:
+       node_memory_Buffers_bytes{job="node_exporter",instance="localhost:9100"}
+    - Cached_memory:
+       node_memory_Cached_bytes{instance="localhost:9100",job="node_exporter"}
+    - Free_memory:
+       node_memory_MemFree_bytes{instance="localhost:9100",job="node_exporter"}
