@@ -10,3 +10,8 @@ Memory:
        node_memory_Cached_bytes{instance="localhost:9100",job="node_exporter"}
     - Free_memory:
        node_memory_MemFree_bytes{instance="localhost:9100",job="node_exporter"}
+Network:
+    - Transmit bytes:
+       irate(node_network_transmit_bytes_total{instance="localhost:9100",job="node_exporter"}[5m])
+    - Receive bytes:
+       irate(node_network_receive_bytes_total{instance="localhost:9100",job="node_exporter"}[5m])
