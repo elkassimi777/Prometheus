@@ -1,0 +1,12 @@
+groups:
+  - name: my-alerts
+    interval: 15s
+    rules:
+      - alert: NodeDown 
+        expr: up{job="node_exporter"}==0
+        for: 0m
+        labels: 
+          team: infra
+          env: prod
+        annotations:
+          message: " instance {{.Labels.instance}} is currently  down"
